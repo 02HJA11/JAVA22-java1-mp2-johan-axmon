@@ -8,8 +8,9 @@ class Discount extends Product{
 			this.discount = discount;
 			
 		}
-			double newPrice = price / discount;
-			
+	void discounted(double discount){
+			price = price / discount
+	}
 		
 		
 		void buy() {
