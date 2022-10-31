@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//The customer variable gets a name cause why not and bought items is set to 0 by default.
-		Customer a = new Customer("Steve", 0);
+		Customer a = new Customer("Steve", 0, 0);
 		//Product names come first then price and then total amount left, the total amount is subtracted in the buy.
 		Product Chips = new Product("Tortilla chips, lightly salted", 15, 10);
 		Product Soda = new Product("Monster energy, khaotic", 17, 7);
@@ -22,7 +22,7 @@ public class Main {
 			
 			System.out.println("1. " + Chips.productName + " " + Chips.price + "kr " + Chips.amountTotal + " left");
 			System.out.println("2. " + Soda.productName + " " + Soda.price + "kr " + Soda.amountTotal + " left");
-			System.out.println("3. " + Dip.productName + " " + Dip.newPriceFinal + "kr " + Dip.amountTotal + " left");
+			System.out.println("3. " + Dip.productName + " " + "was 25kr, is now " + Dip.newPrice + "kr " + Dip.amountTotal + " left");
 			System.out.println("4. Checkout");
 			System.out.println("Select:");
 			int option = sc.nextInt();
@@ -31,7 +31,7 @@ public class Main {
 			case 1:
 				if(Chips.amountTotal > 0) {
 				Chips.buy();
-				a.buy();
+				a.buy(Chips.price);
 				}else {
 					System.out.println("Sorry we are out of stock on the current item.");
 				}
@@ -39,7 +39,7 @@ public class Main {
 			case 2:
 				if(Soda.amountTotal > 0) {
 				Soda.buy();
-				a.buy();
+				a.buy(Soda.price);
 				}else {
 					System.out.println("Sorry we are out of stock on the current item.");
 				}
@@ -47,16 +47,15 @@ public class Main {
 			case 3:
 				if(Dip.amountTotal > 0) {
 				Dip.buy();
-				a.buy();
+				a.buy(Dip.newPrice);
 				}else {
 					System.out.println("Sorry we are out of stock on the current item.");
 				}
 				break;
 			case 4:
 				done = true;
-				int total;
-				total = Chips.totalPrice + Soda.totalPrice + Dip.totalPrice;
-				System.out.println("You bought " + a.amountBought + " items and your total is: " + total + "kr");
+//				a.finished(Chips.totalPrice, Dip.totalPrice, Soda.totalPrice);
+				System.out.println("You bought " + a.amountBought + " " + "for a total of " + a.totalSpent + "kr");
 				sc.close();
 			}
 		}

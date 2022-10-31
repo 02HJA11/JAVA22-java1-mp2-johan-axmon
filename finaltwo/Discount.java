@@ -9,13 +9,13 @@ class Discount extends Product{
 			
 		}
 			double newPrice = price / discount;
-			int newPriceFinal = (int) Math.round(newPrice);
+			
 		
 		
 		void buy() {
 //			newPrice = price / discount;
 				amountTotal--;
-				totalPrice = totalPrice + newPriceFinal;
+				
 			
 			
 		}
