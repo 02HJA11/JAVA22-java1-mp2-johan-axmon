@@ -16,14 +16,14 @@ public class Main {
 		boolean done = false;
 		Scanner sc = new Scanner(System.in);
 //		int option = sc.nextInt();
-		discount.discounted(1.10);
+		Discount.discounted(1.10);
 		
 		while(done == false) {
 		
 			
 			System.out.println("1. " + Chips.productName + " " + Chips.price + "kr " + Chips.amountTotal + " left");
 			System.out.println("2. " + Soda.productName + " " + Soda.price + "kr " + Soda.amountTotal + " left");
-			System.out.println("3. " + Dip.productName + " " + "was 25kr, is now " + Dip.newPrice + "kr " + Dip.amountTotal + " left");
+			System.out.println("3. " + Dip.productName + " " + Dip.price + " kr " + Dip.amountTotal + " left");
 			System.out.println("4. Checkout");
 			System.out.println("Select:");
 			int option = sc.nextInt();
