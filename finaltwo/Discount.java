@@ -3,7 +3,7 @@ package finaltwo;
 class Discount extends Product{
 		 
 		 
-		Discount(, String productName, double price, int amountTotal){
+		Discount(String productName, double price, int amountTotal){
 			super(productName, price, amountTotal);
 			
 			
