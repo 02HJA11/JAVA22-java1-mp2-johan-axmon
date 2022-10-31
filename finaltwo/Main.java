@@ -12,10 +12,11 @@ public class Main {
 		Product Chips = new Product("Tortilla chips, lightly salted", 15, 10);
 		Product Soda = new Product("Monster energy, khaotic", 17, 7);
 		//Discount is what I call the discounted product, the first is the discount option and all the math to round out the actual price is done in the java file for it to report back the correct price.
-		Discount Dip = new Discount(1.10, "Cheese dip", 25, 5);
+		Discount Dip = new Discount("Cheese dip", 25, 5);
 		boolean done = false;
 		Scanner sc = new Scanner(System.in);
 //		int option = sc.nextInt();
+		discount.discounted(1.10);
 		
 		while(done == false) {
 		
