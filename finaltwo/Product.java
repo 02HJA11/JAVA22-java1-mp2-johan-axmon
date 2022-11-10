@@ -1,11 +1,11 @@
 package finaltwo;
 
 class Product {
-		int price;
+		double price;
 		int amountTotal;
 		double totalPrice;
 		String productName;
-		Product(String productName, int price, int amountTotal) {
+		Product(String productName, double price, int amountTotal) {
 			this.productName = productName;
 			this.price = price;
 			this.amountTotal = amountTotal;

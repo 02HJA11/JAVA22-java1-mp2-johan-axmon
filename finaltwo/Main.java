@@ -13,17 +13,17 @@ public class Main {
 		Product Soda = new Product("Monster energy, khaotic", 17, 7);
 		//Discount is what I call the discounted product, the first is the discount option and all the math to round out the actual price is done in the java file for it to report back the correct price.
 		Discount Dip = new Discount("Cheese dip", 25, 5);
+		Dip.applyDiscount(0.50);
 		boolean done = false;
 		Scanner sc = new Scanner(System.in);
 //		int option = sc.nextInt();
-		Discount.discounted(1.10);
 		
 		while(done == false) {
 		
 			
 			System.out.println("1. " + Chips.productName + " " + Chips.price + "kr " + Chips.amountTotal + " left");
 			System.out.println("2. " + Soda.productName + " " + Soda.price + "kr " + Soda.amountTotal + " left");
-			System.out.println("3. " + Dip.productName + " " + Dip.price + " kr " + Dip.amountTotal + " left");
+			System.out.println("3. " + Dip.productName + " " + Dip.price + "kr " + Dip.amountTotal + " left");
 			System.out.println("4. Checkout");
 			System.out.println("Select:");
 			int option = sc.nextInt();
@@ -48,7 +48,7 @@ public class Main {
 			case 3:
 				if(Dip.amountTotal > 0) {
 				Dip.buy();
-				a.buy(Dip.newPrice);
+				a.buy(Dip.price);
 				}else {
 					System.out.println("Sorry we are out of stock on the current item.");
 				}

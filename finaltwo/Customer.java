@@ -15,8 +15,4 @@ class Customer {
 			totalSpent += price;
 			}
 		
-//		void finished(double x, double y, double z) {
-//			double p = x + y + z;
-//			System.out.println("You bought " + amountBought + " items and your total is: " + p + "kr");
-//		}
 }
